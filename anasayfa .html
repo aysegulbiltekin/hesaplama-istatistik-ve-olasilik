@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="http://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+                
+      <!--bootstrap  burada kullanacagimizi belirttik --> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <style>
+         body {
+           margin: 0;
+		     padding: 0;
+           background-image:url("canva3.png") ;
+           background-repeat: no-repeat;
+           background-size:cover;
+           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+		  .pencere{
+		     display: block;
+		     background: aliceblue;
+		     opacity: 0.8;
+		     border-radius: 29px;
+           
+		  }
+       
+         /* Style the tab */
+         .tab {
+            
+         overflow: hidden;
+         border: 10px solid #ccc;
+         background-color: #f1f1f1;
+         }
+         
+         /* Style the buttons inside the tab */
+         .tab button {
+         font-family: 'Gagalin', sans-serif;
+         float: left;
+         border-radius: px;
+         outline: none;
+         cursor: pointer;
+         padding: 14px 16px;
+         transition: 0.3s;
+         font-size: 17px;
+         color: white;
+         }
+         /* Change background color of buttons on hover */
+         .tab button:hover {
+         background-color: #ddd;
+         }
+         /* Create an active/current tablink class */
+         .tab button.active {
+         background-color: #ccc;
+         }
+         /* Style the tab content */
+         .tabcontent  {
+         margin: auto;
+         margin-top: 20px;
+         display: none;
+         padding: 6px 12px;
+         border: 5px solid #cfd8df;
+         border-top: none;
+         }
+
+          h1{
+           font-family: 'Gagalin', sans-serif;
+           font-size:60px ;
+           padding-top: 50px;
+           padding-left: 600px;
+        }
+        h2{
+           font-family: 'Gagalin', sans-serif;
+           font-size:50px ;
+           padding-top: 10px;
+           padding-left: 750px;
+        }
+        h3{
+           margin-left: 20px;
+           color: #95338a;
+           font-size: 30px;
+           margin-bottom: 5px;
+           font-family: 'Gagalin', sans-serif;
+
+        }
+        h4{
+           margin-left: 20px;
+           color: #0c4762;
+           padding-top: 15px;
+           font-family: 'Gagalin', sans-serif;
+           font-size: 25px;
+        }
+
+        b{
+         font-size: 20px;
+         font-family: 'Gagalin', sans-serif;
+        }
+
+        p{
+           margin: 30px;
+           text-align: justify;
+           font-size: medium;
+        }
+        br{
+           margin: 30px;
+           text-align: justify;
+
+        }
+
+        #baslık{
+           color: #2ca69b;
+        }
+
+        #tablo{
+           width: 700px;
+           height:400px;
+        }
+        
+        #tablo2{
+           width: 600px;
+           height:350px;
+        }
+        #resim{
+           margin-left: 280px;
+           width: 500px;    
+           height: 350px;      
+           
+        }
+         
+      </style>
+   </head>
+   <body>
+      <h1>İSTATİSTİK ve OLASILIK </h1>
+      <h2>HESAPLAMA</h2>
+      <div class="navbar navbar-default navbar-fixed-top">
+         <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'istatistik')">İSTATİSTİK</button>
+         <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'olasilik')">OLASILIK</button>
+         <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'hakkinda')">HAKKINDA</button>
+      </div>
+      <div class="container">
+         <div id="hakkinda" class="tabcontent pencere">
+		
+
+      <h3>İSTATİSTİK NEDİR ?</h3>
+      <p>İstatistik veya sayıtım, belirli bir amaç için veri toplama, tablo ve grafiklerle özetleme, sonuçları yorumlama, sonuçların güven derecelerini açıklama, örneklerden elde edilen sonuçları kitle için genelleme, özellikler arasındaki ilişkiyi araştırma, çeşitli konularda geleceğe ilişkin tahmin yapma, deney düzenleme ve gözlem ilkelerini kapsayan bir bilimdir. Belirli bir amaç için verilerin toplanması, sınıflandırılması, çözümlenmesi ve sonuçlarının yorumlanması esasına dayanır.
+		<!--<br><img id="resim2" src="4.JPG"> --> 
+		 <h4>Ortalama</h4>
+		  <p>Aritmetik ortalama, en çok kullanılan merkezi eğilim ölçüsüdür. Birimlerin belirli bir değişken bakımından aldıkları değerlerin toplamının birim sayısına bölümü olarak tanımlanır. Eşit aralıklı ve oran ölçme düzeyinde ölçülen değişkenler için kullanılır.
+         Aritmetik ortalama hem kitle hem de örneklem için hesaplanır. 
+         <br> <img src="ao.jpg">
+      </p>	
+
+      <h4>Mod</h4> 
+		 <p>Bir veri grubunda en çok tekrarlanan değere tepe değer(mod) denir. Tepe değerin hesaplanmasında birimlerin büyüklük sırasına konulması şart değilse de, bu işlemin yapılması tepe değerin bulunmasında kolaylık sağlar.
+         <p><b id="baslık">ÖRNEK:</b></p>
+         <img src="5.png" alt="">
+         <br>
+         <p>Yukarıda verilen tablo incelendiğinde 72 sayısı 3 kez tekrar ederek en çok tekrar eden sayı durumuna gelmiştir. Bu durumda Mod: 72 olur.</p>
+      </p>
+
+      <h4>Medyan</h4>
+		 <p>Bir veri gurubundaki değerler küçükten büyüğe sıralandığında tam ortaya düşen değer ortanca değeridir. Kitledeki birimlerin sayısı çok fazla ise verilerin özetlenmesinde merkezi eğilim ölçüsü olarak ortanca kullanılabilir. Ortanca, sınıflama ölçme düzeyi ile ölçülen değişkenler için kullanılmaz. Eşit aralıklı, oran ve sıralama ölçme düzeyinde ölçülen değişkenler için kullanılır.
+		 <br><img  src="medyan.png" >
+       <p><b id="baslık">ÖRNEK:</b>
+      <br><img src="medyan2.png">
+       <br>
+         <br>Verilerin küçükten büyüğe sıralanmış hali yukarıdaki gibidir. 
+         <br>Veri sayısı n=10 çift olduğu için ortaya düşen iki değerin ortalaması ortanca olacaktır.
+         <br>
+         <br>j = n/2  =10 / 2 = 5 ve j + 1 = 6 olmak üzere,
+         <br>OR  = ( x5 + x6 ) / 2 = (17 +18 ) / 2 = 17.5
+      </p>
+      </p>
+
+       <h4>Varyans ve Standart Sapma</h4>
+		 <p>Varyans, gözlem değerlerinin ortalamadan sapmalarının bir ölçüsüdür. Gözlem değerlerinden elde edildiğinden, örneklem varyansı olarak adlandırılır ve  s2  ile gösterilir. Kitle varyansı a2  , örneklem varyansı  s2  ile gösterilir.
+       <p>Standart sapma varyansın kareköküdür. Kitle standart sapması a  , örneklem standart sapması s ile gösterilir.</p>
+       <p>Varyans,</p>
+       <img src="varyans.png" >
+       <p>Standart Sapma,</p>
+       <img src="standartSapma.png" >
+       <p>eşitlikleri ile hesaplanır. Burada,</p>
+       <p>
+          <br>s: standart sapma
+          <br>xj : j. denek değeri
+          <br>x : aritmetik ortalama
+          <br>n : birim sayısıdır.
+       </p>
+
+      </p>
+
+       <h4>Açıklık</h4>
+		 <p>Bir veri grubunda en büyük değer ile en küçük değer arasındaki farka değişim genişliği denir. R ile gösterilir.</p>
+       <p>R = En büyük değer – En küçük değer</p>
+       <p>Değişim genişliği, değişim aralığını gösteren bir dağılım ölçüsüdür. Değişim genişliğinin hesaplanmasında sadece iki uç değer işleme alındığından, diğer değerlerin hiçbir etkisi yoktur. Bu nedenle değişim genişliği yaygın olarak kullanılan bir dağılım ölçüsü değildir.</p>
+
+       <h3>Olasılık Nedir?</h3>
+		 <p>Olasılık, basitçe, bir şeyin olmasının ne kadar olası olduğudur. Bir olayın sonucundan kesin olarak emin olmadığımızda, belirli sonuçların olasılıklarından yani bu sonuçların ne kadar olası olduklarından bahsedebiliriz. Olasılıkla açıklanan olayların analizine "istatistik" denir.</p>
+
+       <p><b>Evrensel Küme: </b>
+         <br>Çıktıların oluşturduğu kümeye evrensel küme denir. Evrensel kümeye her eleman 1 kez yazılır. KAHRAMANMARAŞ kelimesinin harflerini inceleyelim.
+         <br>E=(K,A,H,R,M,N,Ş) s(E)=7 
+       </p>
+       <p><b>Örnek Uzay:</b>
+         <br>Bir deneyde gelebilecek çıktılar kümesine denir. Her bir çıktı ayrı ayrı yazılır.
+         <br>Ö=(K,A,H,R,A,M,A,N,M,A,R,A,Ş)
+       </p>
+       <p><b>Olay: </b>
+         <br>Örnek uzayın her bir alt kümesine bir olay denir. Yani olması istenen çıktıların kümesine denir.
+         <br> K olma olayı (K) | 1 elemanlı 
+         <br>A olma olayı (A,A,A,A,A) | 5 elemanlı 
+       </p>
+       <p><b>Bağımlı Olaylar:</b>
+         <br>İki olaydan herhangi birinin gerçekleşmesi diğer olayın olma olasılığını değiştiriyorsa bu olaylara bağımlı olaylar denir. 
+      </p>
+      <p><b>Bağımsız Olaylar:</b>
+         <br>İki olaydan herhangi birinin gerçekleşmesi diğer olayın olma olasılığını değiştirmiyorsa bu olaylara bağımsız olaylar denir.
+      </p>
+
+
+       <h4>Tekli Olasılık</h4>
+		 <p>Kullanıcıdan alınan olaylar sayısının, olası sonuçlara bölümüdür
+		 
+       <h4>Bayes</h4>
+       <p><b>Bayes Tarihçesi</b> 
+       <p>Bayes Teoremi, 18. yüzyılda İngiliz Bakan ve matematikçi olan Thomas Bayes (1702 – 1761) tarafından öne sürülmüş ve özellikle geçtiğimiz son yarım yüzyılda önemi giderek daha fazla anlaşılmış bir teorem. Günümüzde Bayes teoremi fizikten kanser araştırmalarına, çevre bilimden psikolojiye kadar bir çok yerde kendine bir uygulama alanı bulmuş durumdadır.</p>
+
+       <br><img id=resim src="3.jpg" alt="">
+		 <p>model parametrelerinin sonsal dağılımlarını tahmin etmek için kullanılabilen Bayes istatistiklerine dayanan bir hesaplama yöntemleri sınıfını oluşturur
+			<p>P(A|B) = B olayı gerçekleştiğinde A olayının gerçekleşme olasılığı
+			<p>P(A) = A olayının gerçekleşme olasılığı
+			<p>P(B|A) = A olayı gerçekleştiğinde B olayının gerçekleşme olasılığı
+			<p>P(B) = B olayının gerçekleşme olasılığı
+			<p>
+         <br><img src="https://erdincuzun.com/wp-content/uploads/2017/2016/bayes/bayes_01.png">
+         <br>
+
+         <p><b id="baslık">ÖRNEK:</b></p>
+         <p>Bir klinikte yapılan kanser testi gerçekte kanser olan hastaların %98’inde pozitif olarak sonuç veriyor. Bu test, gerçekte kanser olamayan hastaların %97’sinde negatif olarak sonuç veriyor.  Ayrıca toplumdaki kişilerin 0.008’nin kanser olduğu biliniyor.
+            Buna göre kanser testi pozitif çıkmış bir kişinin gerçekte kanser olma olasılığı nedir?
+         </p>
+         <p><b>Verilenler:</b>
+         <br>𝑃(𝑘𝑎𝑛𝑠𝑒𝑟)=0.008 // kişi hakkında hiçbir bilgi yokken kişinin kanser olma olasılığı
+         <br>𝑃(¬𝑘𝑎𝑛𝑠𝑒𝑟)=0.992
+         <br>𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓|𝑘𝑎𝑛𝑠𝑒𝑟)=0.98 // kişi kanser iken testinin pozitif olma olasılığı
+         <br>𝑃(𝑡𝑒𝑠𝑡𝑛𝑒𝑔𝑎𝑡𝑖𝑓|𝑘𝑎𝑛𝑠𝑒𝑟)=0.02
+         <br>𝑃(𝑡𝑒𝑠𝑡𝑛𝑒𝑔𝑎𝑡𝑖𝑓|¬𝑘𝑎𝑛𝑠𝑒𝑟)=0.97//kişi kanser değilken testinin negatif çıkma olasılığı
+         <br>𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓|¬𝑘𝑎𝑛𝑠𝑒𝑟)=0.03
+         <br>
+         <p><b>İstenen:</b>
+         <br>𝑃(𝑘𝑎𝑛𝑠𝑒𝑟|𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓)=?
+         <br>
+         <br>Bayes teoremi ile: 
+         <br>𝑃(𝑘𝑎𝑛𝑠𝑒𝑟|𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓) = ( 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓 | 𝑘𝑎𝑛𝑠𝑒𝑟 ) × 𝑃(𝑘𝑎𝑛𝑠𝑒𝑟) ) / 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓)
+         <br>
+         <br>Burada bilmediğimiz şey 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓). Yani kişinin kanser olup olmadığına bağlı olmaksızın testinin pozitif çıkma olasılığı.
+         <br>
+         <br>Bir kişi ya kanserdir yada kanser değildir. O halde testin pozitif çıkması kanserli kişilerde ve kanser olmayan kişilerde görülür. 
+         <br>Bir kişinin kanser olması ve testinin pozitif çıkması:  𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓, 𝑘𝑎𝑛𝑠𝑒𝑟).
+         <br>Bir kişinin kanser olmaması testinin pozitif çıkması:  𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓, ¬𝑘𝑎𝑛𝑠𝑒𝑟).
+         <br>
+         <br>𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓) = 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓, 𝑘𝑎𝑛𝑠𝑒𝑟) + 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓, ¬𝑘𝑎𝑛𝑠𝑒𝑟)
+         <br>=𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓 | 𝑘𝑎𝑛𝑠𝑒𝑟) × 𝑃(𝑘𝑎𝑛𝑠𝑒𝑟) + 𝑃(𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓 | ¬𝑘𝑎𝑛𝑠𝑒𝑟) × 𝑃(¬𝑘𝑎𝑛𝑠𝑒𝑟)
+         <br>=0.98×0.008+0.03×0.992 = 0.0376
+         <br>
+         <br>𝑃(𝑘𝑎𝑛𝑠𝑒𝑟|𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓) = (0.98×0.008) / 0.0376 = 0.2
+         <br>Şu halde 𝑃( ¬𝑘𝑎𝑛𝑠𝑒𝑟|𝑡𝑒𝑠𝑡𝑝𝑜𝑧𝑖𝑡𝑖𝑓) = 1 − 0.2 = 0.8
+         <br>
+         <br>Testi pozitif çıkan kişinin kanser olmama olasılığı çok daha yüksektir. O halde bu test pek güvenilir değildir!
+      
+      </p>
+         <h4>Naive Bayes</h4>
+         <p>Naive Bayes sınıflandırması olasılık ilkelerine göre tanımlanmış bir dizi hesaplama ile, sisteme sunulan verilerin sınıfını yani kategorisini tespit etmeyi amaçlar.
+         Naive Bayes sınıflandırmasında sisteme belirli bir oranda öğretilmiş veri sunulur (Örn: 100 adet). Öğretim için sunulan verilerin mutlaka bir sınıfı/kategorisi bulunmalıdır. Öğretilmiş veriler üzerinde yapılan olasılık işlemleri ile, sisteme sunulan yeni test verileri, daha önce elde edilmiş olasılık değerlerine göre işletvilir ve verilen test verisinin hangi kategoride olduğu tespit edilmeye çalışılır. Elbette öğretilmiş veri sayısı ne kadar çok ise, test verisinin gerçek kategorisini tespit etmek o kadar kesin olabilmektedir.
+         Naive Bayes sınıflandırma yönteminin birçok kullanım alanı bulunabilir fakat, burada neyin sınıflandırıldığından çok nasıl sınıflandırıldığı önemli. Yani öğretilecek veriler binary veya text veriler olabilir, burada veri tipinden ve ne olduğundan ziyade, bu veriler arasında nasıl bir oransal ilişki kurduğumuz önem kazanıyor.</p>
+         
+         <p>
+         <br><b id="baslık">ÖRNEK:</b>
+         <br><img id="tablo" src="1.png">
+         <br>
+         <br>Elimizde bu eğitim seti varken ‘Tüylü, Kırmızı, Büyük, Yumuşak’ özelliklere sahip bir hayvanı yemek güvenli midir yoksa tehlikeli midir?
+         <br>
+         <br>𝑃(𝑔ü𝑣𝑒𝑛𝑙𝑖|𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘) Vs 𝑃(𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖|𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘)
+         <br>𝑃𝑔ü𝑣𝑒𝑛𝑙𝑖𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘 ∝ 𝑃(𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑔ü𝑣𝑒𝑛𝑙𝑖)
+         <br>
+         <br>Eğitim setindeki 16 hayvandan 10’u güvenli sınıfındadır. O halde 𝑃𝑔ü𝑣𝑒𝑛𝑙𝑖=1016=0,62.
+         <br>
+         <br>Şartlı bağımsız varsayımı sayesinde:
+         <br>𝑃𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘𝑔ü𝑣𝑒𝑛𝑙𝑖=
+         <br>=𝑃(𝑡ü𝑦𝑙ü|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑘𝚤𝑟𝑚𝚤𝑧𝚤|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑏ü𝑦ü𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑦𝑢𝑚𝑢ş𝑎𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)
+         <br>
+         <br><img id="tablo2" src="2.png">
+         <br>
+         <br>Güvenli sınıfındaki 10 hayvandan 6’sı tüylüdür.
+         <br>𝑃(𝑡ü𝑦𝑙ü|𝑔ü𝑣𝑒𝑛𝑙𝑖)=6/10=0,6.
+         <br>
+         <br>Güvenli sınıfındaki 10 hayvandan 5’i kırmızıdır. 
+         <br>𝑃(𝑘𝚤𝑟𝑚𝚤𝑧𝚤|𝑔ü𝑣𝑒𝑛𝑙𝑖)=5/10=0,5.
+         <br>
+         <br>Güvenli sınıfındaki 10 hayvandan 5’i büyüktür. 
+         <br>𝑃(𝑏ü𝑦ü𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)=5/10=0,5.
+         <br>
+         <br>Güvenli sınıfındaki 10 hayvandan 3’ü yumuşaktır. 
+         <br>𝑃(𝑦𝑢𝑚𝑢ş𝑎𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)=3/10=0,3.
+         <br>
+         <br>𝑃𝑔ü𝑣𝑒𝑛𝑙𝑖𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘 ∝ 𝑃(𝑡ü𝑦𝑙ü|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑘𝚤𝑟𝑚𝚤𝑧𝚤|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑏ü𝑦ü𝑘|𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃𝑦𝑢𝑚𝑢ş𝑎𝑘𝑔ü𝑣𝑒𝑛𝑙𝑖)×𝑃(𝑔ü𝑣𝑒𝑛𝑙𝑖)
+         <br>=0,6×0,5×0,5×0,3×0,62=0,0279.
+         <br>
+         <br>Benzer şekilde 𝑃𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘 ı hesaplayalım.
+         <br>
+         <br>𝑃𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘 ∝ 𝑃(𝑡ü𝑦𝑙ü|𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖)×𝑃(𝑘𝚤𝑟𝑚𝚤𝑧𝚤|𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖)×𝑃(𝑏ü𝑦ü𝑘|𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖)×𝑃𝑦𝑢𝑚𝑢ş𝑎𝑘𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖×𝑃(𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖)
+         <br>=0,33×0,33×0,33×0,5×0,38=0,006.
+         <br>
+         <br>𝑃(𝑔ü𝑣𝑒𝑛𝑙𝑖|𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘) > 𝑃(𝑡𝑒ℎ𝑙𝑖𝑘𝑒𝑙𝑖|𝑡ü𝑦𝑙ü,𝑘𝚤𝑟𝑚𝚤𝑧𝚤,𝑏ü𝑦ü𝑘,𝑦𝑢𝑚𝑢ş𝑎𝑘)
+         <br>
+         <br>olduğundan test örneğini güvenli olarak sınıflandırırız. Yani ‘Tüylü, Kırmızı, Büyük, Yumuşak’ özelliklere sahip bir hayvanı yemek güvenlidir.
+      </p>
+      </p>
+
+         
+         </div>
+         <div id="istatistik" class="tabcontent pencere">
+            <h3>Seçiniz</h3>
+            <div class="dropdown">
+               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">İşlem Seçiniz
+               <span class="caret"></span></button>
+               <ul class="dropdown-menu">
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'ortalama')">Ortalama</button>
+                  
+                 <!-- <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'gortalama')">Geometrik Ortalama</button> -->
+
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'mod')">Mod</button>
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'medyan')">Medyan</button>
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'standartSapma')">Standart Sapma</button>
+
+               </ul>
+            </div>
+         </div>
+         <div id="olasilik" class="tabcontent pencere">
+            <h3>Seçiniz</h3>
+            <div class="dropdown">
+               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">İşlem Seçiniz
+               <span class="caret"></span></button>
+               <ul class="dropdown-menu">
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'tekliOlasilik')">Tekli olasılık</button>
+                  <button class="btn btn-default navbar-btn" onclick="menuAc(event, 'bayes')">Bayes</button>
+               </ul>
+            </div>
+         </div>
+         <div id="tekliOlasilik" class="tabcontent pencere">
+            <h3>Tekli Olasılık</h3>
+            <form>
+               <label for="os">Olumlu Sonuc Sayisi:</label>
+               <input type="text" id="os" name="os"><br><br>
+               <label for="tos">Toplam Olumlu Sonuc Sayisi:</label>
+               <input type="text" id="tos" name="tos"><br><br>
+               <input type="button" value="Hesapla"   onClick="olasilik(os,tos)">
+               <br>
+               Sonuc <input type="text" name="sonucOlasilik" id="sonucOlasilik"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+         <div id="ortalama" class="tabcontent pencere">
+            <h3>Ortalama</h3>
+            <form>
+               Ortalamasi alinmasini istediginiz sayilari virgul ile giriniz <textarea type="text" rows="1" cols="50" name="source" id="sayilarArrayiOrtala"></textarea><br>
+               <input type="button" value="Hesapla"   onClick="ortalamaAl(sayilarArrayiOrtala)">
+               <br>
+               Sonuc <input type="text" name="sonucToplam" id="sonucToplam"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+
+         <!--
+         <h3>Geometrik Ortalama</h3>
+            <form>
+               Ortalamasi alinmasini istediginiz sayilari virgul ile giriniz <textarea type="text" rows="1" cols="50" name="source" id="sayilarArrayigOrtala"></textarea><br>
+               <input type="button" value="Hesapla"   onClick="gortalamaAl(sayilarArrayigOrtala)">
+               <br>
+               Sonuc <input type="text" name="sonucgToplam" id="sonucgToplam"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+
+         -->
+         <div id="mod" class="tabcontent pencere">
+            <h3>Mod Alma</h3>
+            <form>
+               Sayı virgül modunu giriniz : <textarea type="text" rows="1" cols="50" name="source" id="sayilarArrayiMod"></textarea><br>
+               <input type="button" value="Hesapla"   onClick="modAl(sayilarArrayiMod)">
+               <br>
+               Sonuc <input type="text" name="sonucMod" id="sonucMod"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+         <div id="medyan" class="tabcontent pencere">
+            <h3>Medyan</h3>
+            <form>
+               Sayıları virgül ile giriniz : <textarea type="text" rows="1" cols="50" name="source" id="sayilarArrayiMedyan"></textarea><br>
+               <input type="button" value="Hesapla"   onClick="medyanBul(sayilarArrayiMedyan)">
+               <br>
+               Sonuc <input type="text" name="sonucMedyan" id="sonucMedyan"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+         ,
+         <div id="bayes" class="tabcontent pencere">
+            <form  class="form-group">
+               <label for="incidence">P(A)</label>
+               <input type="number", id="incidence", name="incidence", min="0", max="100000", step="1",    required> 
+               <br>
+               <label for="hassasiyet">P(B)</label>
+               <input type="number", id="hassasiyet", name="hassasiyet", min="0", max="100", step=".01", placeholder="yuzde", required> 
+               <br>
+               <label for="ozguluk">P(B|A)</label>
+               <input type="number", id="ozguluk", name="ozguluk", min="0", max="100", step=".01", placeholder="yuzde", required> 
+               <br> 
+               <input type="checkbox", id="olumlu_deger", name="olumlu_deger"> 
+               <br>
+               <label for="posterior" >P(A|B):</label>
+               <output id="posterior" name="posterior">Gecersiz sayi</output>
+            </form>
+         </div>
+		 <div id="standartSapma" class="tabcontent pencere">
+            <h3>Standart  Sapma</h3>
+            <form>
+                Standart Sapma hesabı için sayıları virgül ile giriniz: <textarea type="text" rows="1" cols="50" name="source" id="sayilarStandartSapma"></textarea><br>
+               <input type="button" value="Hesapla"   onClick="standartSapma(sayilarStandartSapma)">
+               <br>
+               Sonuc <input type="text" name="sonucStandartSapma" id="sonucStandartSapma"><br>
+            </form>
+            <p> <span ></span> </p>
+         </div>
+      </div>
+      <script>
+	  document.getElementById("olumlu_deger").style.visibility = "hidden";
+         // normalde hersey html olarak burda ama display=none yani kullanici goremiyor , bu metod gorunur yapar
+                function menuAc(evt, menuAdi) {
+                  var i, tabcontent, tablinks;
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                  document.getElementById(menuAdi).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+          
+         // bu metod ortalama alir
+         function ortalamaAl(sayilarArrayiOrtala) 
+         {
+           sayilarArrayiOrtala = sayilarArrayiOrtala.value //html den veriyi alir
+                              .split(",") // 5,6 mesela bir string bunu array yapar ilk eleman 5 ikinci 6 
+                              .map((i)=>Number(i)) // sayiya donusturur
+         var toplam = 0;
+         for(var i = 0; i < sayilarArrayiOrtala.length; i++) {
+           		toplam += sayilarArrayiOrtala[i];
+         			}
+         var ortalama = toplam / sayilarArrayiOrtala.length;
+         document.getElementById("sonucToplam").value = ortalama; //buldugumuz degeri html e atar
+         }
+         // bu metod geometrik ortalama alir
+         function gortalamaAl(sayilarArrayigOrtala) 
+         {
+           sayilarArrayigOrtala = sayilarArrayigOrtala.value //html den veriyi alir
+                              .split(",") // 5,6 mesela bir string bunu array yapar ilk eleman 5 ikinci 6 
+                              .map((i)=>Number(i)) // sayiya donusturur
+         var gtoplam = 0;
+         for(var i = 0; i < sayilarArrayigOrtala.length; i++) {
+           		gtoplam *= sayilarArrayigOrtala[i];
+         			}
+         var gortalama = gtoplam /Math.sqrt(sayilarArrayigOrtala.length) ;
+         document.getElementById("sonucgToplam").value = gortalama; //buldugumuz degeri html e atar
+         }
+         
+         //olasilik hesaplama
+         function olasilik(os,tos) 
+         {
+           var sonuc = os.value/tos.value;
+         document.getElementById("sonucOlasilik").value = sonuc; //buldugumuz degeri html e atar
+         }
+         
+         function modAl(sayilarArrayiMod) 
+         {
+           sayilarArrayiMod = sayilarArrayiMod.value //html den veriyi alir
+                              .split(",") // 5,6 mesela bir string bunu array yapar ilk eleman 5 ikinci 6 
+                              .map((i)=>Number(i)) // sayiya donusturur
+         
+		 
+		 var map = {};
+		 var mostFrequentElement = sayilarArrayiMod[0];
+		 
+			for(var i = 0; i<sayilarArrayiMod.length; i++){
+			if(!map[sayilarArrayiMod[i]]){
+				map[sayilarArrayiMod[i]]=1;
+			}else{
+				++map[sayilarArrayiMod[i]];
+				if(map[sayilarArrayiMod[i]]>map[mostFrequentElement]){
+					mostFrequentElement = sayilarArrayiMod[i];
+				}
+			}
+		 }
+         document.getElementById("sonucMod").value = mostFrequentElement; //buldugumuz degeri html e atar
+         }
+         
+         function medyanBul(sayilarArrayiMedyan) 
+         {
+           sayilarArrayiMedyan = sayilarArrayiMedyan.value //html den veriyi alir
+                              .split(",") // 5,6 mesela bir string bunu array yapar ilk eleman 5 ikinci 6 
+                              .map((i)=>Number(i)) // sayiya donusturur
+         
+         
+         sayilarArrayiMedyan.sort(function(a,b){ //sayilari kucukten buyuge siralar
+         return a-b;
+         });
+         
+         var yari = Math.floor(sayilarArrayiMedyan.length / 2);
+         if (yari.length % 2 == 0)
+         document.getElementById("sonucMedyan").value = (sayilarArrayiMedyan[(sayilarArrayiMedyan.length/2)-1]+sayilarArrayiMedyan[sayilarArrayiMedyan.length/2])/2;
+         else
+         document.getElementById("sonucMedyan").value = sayilarArrayiMedyan[Math.floor((sayilarArrayiMedyan.length-1)/2)];
+         }
+         
+         function _bayesHesapla(oncelikk, hassasiyet, ozguluk, olumlu_deger) {
+         const p_test_olumlu = olumlu_deger ? hassasiyet : 1-hassasiyet
+         if (oncelikk==0 || p_test_olumlu == 0){
+            return 0
+         }
+         const p_test_olumsuz = olumlu_deger ? 1-ozguluk : ozguluk
+         return 1/(1+ p_test_olumsuz*(1-oncelikk)/(p_test_olumlu*oncelikk))
+         }
+         
+         function bayesHesapla() {
+         document.getElementById("posterior").value = _bayesHesapla(
+            document.getElementById("incidence").value,
+            document.getElementById("hassasiyet").value,
+            document.getElementById("ozguluk").value,
+            document.getElementById("olumlu_deger").value
+         ) *100 + "%";
+         } 
+         
+         window.addEventListener("load", function(){
+                 document.getElementById("bayes").oninput = bayesHesapla
+         document.getElementById("bayes").onreset = bayesHesapla
+         
+         function add_wasModified() {
+         this.classList.add("wasModified");
+         }
+         
+         for (const input of document.getElementsByTagName("input")) {
+         input.oninput = add_wasModified;
+         }
+         });
+		 
+		 // standart sapma hesaplama
+		 function standartSapma (array) {
+		  array = array.value //html den veriyi alir
+                              .split(",") // 5,6 mesela bir string bunu array yapar ilk eleman 5 ikinci 6 
+                              .map((i)=>Number(i)) // sayiya donusturur
+		  const n = array.length
+		  const mean = array.reduce((a, b) => a + b) / n //ortalamalarını alma
+		  /**
+		  *  veri setindeki varyansın bulunması gerekir. Varyans, bilgilerin aritmetik ortalama etrafında nasıl kümelendiğini gösterir ve genelde iki veri setini karşılaştırmada kullanılır. Varyansı bulmak için veri setindeki bütün sayılardan aritmetik ortalama çıkarılır. Daha sonra sonucun karesi alınır.
+		  */
+		  
+		  var toplamKarakok = 0;
+		   array.map(x => {Math.pow(x - mean, 2); toplamKarakok+=x}) 
+		 console.log(toplamKarakok);
+		   
+		 document.getElementById("sonucStandartSapma").value = Math.sqrt(array.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n); //buldugumuz degeri html e atar
+		}
+      </script>
+   </body>
+</html>
